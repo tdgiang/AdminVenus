@@ -71,57 +71,13 @@ function App() {
 
 
   return (
-    <div className={classes.container}>
-          <AppBar
-          position="fixed"
-          className={clsx(classes.appBar, {
-            [classes.appBarShift]: open,
-          })}
-        >
-          <Toolbar>
-            {open?<IconButton
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerClose}
-              edge="start"
-              className={classes.menuButton}
-            >
-              <ArrowBackIosIcon />
-            </IconButton>:<IconButton
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerOpen}
-              edge="start"
-              className={clsx(classes.menuButton, {
-                [classes.hide]: open,
-              })}
-            >
-              <MenuIcon />
-            </IconButton>}
-            
-            <Typography variant="h6" noWrap>
-              Mini variant drawer
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        <Drawer open={open} handleDrawerClose={handleDrawerClose} />
-        <div  style={{backgroundColor:'red',paddingTop:50}} >
-          <Switch   >
-            <Route exact path="/">
-              <Home  />
-            </Route>
-            <Route   path="/department">
-              <Department  />
-            </Route>
-            <Route  path="/employee">
-              <Employee  />
-            </Route>
-            <Route  path="/report">
-              <Report  />
-            </Route>
-          </Switch>
-        </div>
-    </div>
+     
+        <Drawer  
+        
+        
+        />
+        
+     
   );
 }
 

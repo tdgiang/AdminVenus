@@ -1,10 +1,18 @@
+import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
+
+import Table from './Table';
 
 
 const DepartmentView=(props)=>{
 
     return(
-        <div>
-            <h1>This is page department</h1>
+        <div  style={{flex:1}}>
+            <h2>Quản lý phòng ban</h2>
+            <Container>
+                <Table />
+
+            </Container>
         </div>
     )
 }
