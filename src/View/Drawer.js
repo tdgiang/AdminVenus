@@ -22,7 +22,9 @@ import Avatar from '@material-ui/core/Avatar';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import FlagIcon from '@material-ui/icons/Flag';
 import avartar from '../assets/images/avatar.jpg';
-
+import ApartmentIcon from '@material-ui/icons/Apartment';
+import PeopleIcon from '@material-ui/icons/People';
+import EqualizerIcon from '@material-ui/icons/Equalizer';
 import {
   BrowserRouter as Router,
   Switch,
@@ -109,9 +111,9 @@ const useStyles = makeStyles((theme) => ({
 
 const pages=[
   { id:'1', name:"TRANG CHỦ",link:"/",icon:<HomeIcon />},
-  {id:'2',name:"Quản LÝ PHÒNG BAN",link:"/department",icon:<HomeIcon />},
-  {id:'3',name:"QUẢN LÝ NHÂN VIÊN",link:"/employee",icon:<HomeIcon />},
-  {id:'4',name:"THỐNG KÊ",link:"/report",icon:<HomeIcon />},
+  {id:'2',name:"Quản LÝ PHÒNG BAN",link:"/department",icon:<ApartmentIcon />},
+  {id:'3',name:"QUẢN LÝ NHÂN VIÊN",link:"/employee",icon:<PeopleIcon   />},
+  {id:'4',name:"THỐNG KÊ",link:"/report",icon:<EqualizerIcon />},
 ]
 
 
@@ -223,7 +225,7 @@ export default function MiniDrawer() {
               style={{textDecoration:'none',color:'black'}}
             >
               <ListItem button key={item.id}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.name} />
               </ListItem>
             </Link>

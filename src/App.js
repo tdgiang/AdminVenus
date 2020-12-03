@@ -1,22 +1,11 @@
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+ 
 import Drawer from './View/Drawer';
-import Home from './View/Home';
-import Employee from './View/Employee/EmployeeContainer';
-import Department from './View/Department/DepartmentContainer';
-import Report from './View/Report/ReportContainer';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+ 
+
+ 
 
 
 
