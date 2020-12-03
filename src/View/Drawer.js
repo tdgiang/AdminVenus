@@ -11,13 +11,18 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import HomeIcon from '@material-ui/icons/Home';
+import AssessmentIcon from '@material-ui/icons/Assessment';
+import GroupIcon from '@material-ui/icons/Group';
+import ApartmentIcon from '@material-ui/icons/Apartment';
+import Typography from '@material-ui/core/Typography';
+
+
 
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
+    Link,
+    Button
   } from "react-router-dom";
 
 const drawerWidth = 240;
@@ -84,6 +89,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+const pages=[
+  { id:'1', name:"TRANG CHỦ",link:"/",icon:<HomeIcon />},
+  {id:'2',name:"Quản LÝ PHÒNG BAN",link:"/department",icon:<ApartmentIcon />},
+  {id:'3',name:"QUẢN LÝ NHÂN VIÊN",link:"/employee",icon:<GroupIcon />},
+  {id:'4',name:"THỐNG KÊ",link:"/report",icon:<AssessmentIcon />},
+]
+
 export default function MiniDrawer(props) {
   const classes = useStyles();
   const theme = useTheme();
@@ -110,15 +123,22 @@ export default function MiniDrawer(props) {
         </div>
         <Divider />
         <List>
-          {[`/employee`, `/employee`, `/employee`, `/employee`].map((text, index) => (
-            <ListItem   button key={text}>
-              <ListItemIcon>
-                  <InboxIcon />
-              </ListItemIcon>
-              <Link to={text}>
-                Props v. State
+          {pages.map((item, index) => (
+              <Link 
+                key={item.id} 
+                to={item.link}
+                underline= 'hover'
+                style={{textDecoration:'none',color:'black'}}
+               
+              >
+                <ListItem   button>
+                  <ListItemIcon>
+                      {item.icon}
+                  </ListItemIcon>
+                  <Typography variant='button'  color={'black'} >{item.name}</Typography>
+                </ListItem>
+                 
             </Link>
-            </ListItem>
           ))}
         </List>
       </Drawer>

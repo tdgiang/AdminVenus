@@ -11,7 +11,7 @@ import Drawer from './View/Drawer';
 import Home from './View/Home';
 import Employee from './View/Employee/EmployeeContainer';
 import Department from './View/Department/DepartmentContainer';
- 
+import Report from './View/Report/ReportContainer';
 import {
   BrowserRouter as Router,
   Switch,
@@ -105,18 +105,22 @@ function App() {
           </Toolbar>
         </AppBar>
         <Drawer open={open} handleDrawerClose={handleDrawerClose} />
-        <Switch>
-          <Route exact path="/">
-            <Home  />
-          </Route>
-          <Route   path="/department">
-            <Department  />
-          </Route>
-          <Route  path="/employee">
-            <Employee  />
-          </Route>
-        </Switch>
-      
+        <div  style={{backgroundColor:'red',paddingTop:50}} >
+          <Switch   >
+            <Route exact path="/">
+              <Home  />
+            </Route>
+            <Route   path="/department">
+              <Department  />
+            </Route>
+            <Route  path="/employee">
+              <Employee  />
+            </Route>
+            <Route  path="/report">
+              <Report  />
+            </Route>
+          </Switch>
+        </div>
     </div>
   );
 }

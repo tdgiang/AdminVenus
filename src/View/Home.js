@@ -11,17 +11,7 @@ import {
 
 const Home=(props)=>{
     return(
-        <div  style={styles.contaienr}>
-             <ul>
-        <li>
-          <Link to={`/department`}>Components</Link>
-        </li>
-        <li>
-          <Link to={`/employee`}>
-            Props v. State
-          </Link>
-        </li>
-      </ul>
+        <div  >
             <h1>This is home pagdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
             <h1>This is home pagdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
             <h1>This is home pagdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
@@ -32,12 +22,5 @@ const Home=(props)=>{
     )
 }
 
-
-const styles={
-    contaienr:{
-        flex:1,
-        marginTop:150
-    }
-}
 
 export default Home
